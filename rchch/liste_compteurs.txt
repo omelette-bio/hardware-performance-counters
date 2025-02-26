@@ -1,0 +1,22 @@
+alors du coup faut que je check parce qu'il ya 3 types
+
+core, uncore et offcore
+
+site pour intel : https://perfmon-events.intel.com/ et regarder dans tigerlake
+
+pour amd j'en ai aucune idee je check vendredi en sah
+
+
+pour trouver des events un peu generiques avec leur code
+/sys/devices/cpu/events
+
+sinon on peut utiliser perf list pour trouver la liste de tous les compteurs
+
+ensuite la partie Architecture Performance Monitoring Features de la commande cpuid donne la version du systeme de compteur de perfs du processeur, et plein d'autres infos comme le nombre de "fixed counters" qui sont les compteurs qui calculent une performance fixe certains evenements standard et si ils sont supportes, et il reste aussi le nombre de compteurs programmables
+
+INTEL:
+- version 5
+- compteurs programmables : 8
+- compteurs fixes : 4 (1 inutile) (retired instructions, cpu cycles, unhalted cpu cycles)
+- top-down metrics (?) manquants, limite les analyses de "stall"
+
