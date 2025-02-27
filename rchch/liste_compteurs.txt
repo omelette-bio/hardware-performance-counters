@@ -20,3 +20,8 @@ INTEL:
 - compteurs fixes : 4 (1 inutile) (retired instructions, cpu cycles, unhalted cpu cycles)
 - top-down metrics (?) manquants, limite les analyses de "stall"
 
+
+https://github.com/RRZE-HPC/likwid/wiki/Zen2
+AMD:
+- compteurs custom : 6
+- compteurs fixes : 3
