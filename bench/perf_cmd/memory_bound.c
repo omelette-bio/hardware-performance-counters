@@ -51,17 +51,17 @@ int main()
 
     mat_mult();
 
-    fprintf(stderr, "%f", A[(int)(0.25 * (N - 1))][(int)(0.25 * (P - 1))]);
-    fprintf(stderr, "%f", A[(int)(0.5 * (N - 1))][(int)(0.5 * (P - 1))]);
-    fprintf(stderr, "%f", A[(int)(0.75 * (N - 1))][(int)(0.75 * (P - 1))]);
+    fprintf(stdout, "%f", A[(int)(0.25 * (N - 1))][(int)(0.25 * (P - 1))]);
+    fprintf(stdout, "%f", A[(int)(0.5 * (N - 1))][(int)(0.5 * (P - 1))]);
+    fprintf(stdout, "%f", A[(int)(0.75 * (N - 1))][(int)(0.75 * (P - 1))]);
     
-    fprintf(stderr, "%f", B[(int)(0.25 * (P - 1))][(int)(0.25 * (M - 1))]);
-    fprintf(stderr, "%f", B[(int)(0.5 * (P - 1))][(int)(0.5 * (M - 1))]);
-    fprintf(stderr, "%f", B[(int)(0.75 * (P - 1))][(int)(0.75 * (M - 1))]);
+    fprintf(stdout, "%f", B[(int)(0.25 * (P - 1))][(int)(0.25 * (M - 1))]);
+    fprintf(stdout, "%f", B[(int)(0.5 * (P - 1))][(int)(0.5 * (M - 1))]);
+    fprintf(stdout, "%f", B[(int)(0.75 * (P - 1))][(int)(0.75 * (M - 1))]);
     
-    fprintf(stderr, "%f", C[(int)(0.25 * (N - 1))][(int)(0.25 * (M - 1))]);
-    fprintf(stderr, "%f", C[(int)(0.5 * (N - 1))][(int)(0.5 * (M - 1))]);
-    fprintf(stderr, "%f", C[(int)(0.75 * (N - 1))][(int)(0.75 * (M - 1))]);
+    fprintf(stdout, "%f", C[(int)(0.25 * (N - 1))][(int)(0.25 * (M - 1))]);
+    fprintf(stdout, "%f", C[(int)(0.5 * (N - 1))][(int)(0.5 * (M - 1))]);
+    fprintf(stdout, "%f", C[(int)(0.75 * (N - 1))][(int)(0.75 * (M - 1))]);
 
     return 0;
 }

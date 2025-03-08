@@ -1,0 +1,48 @@
+63.06147872.92312687.70896945.15259925.42749089.3716585146326.0000005024198.5000004917754.500000
+ Performance counter stats for './memory_bound_bench':
+
+     4,600,387,558      L1-dcache-loads:u                                                       (83.35%)
+     2,146,761,732      L1-dcache-load-misses:u          #   46.66% of all L1-dcache accesses   (83.34%)
+     1,740,229,031      l2_cache_req_stat.ls_rd_blk_l_hit_x:u                                        (83.34%)
+       369,560,718      l2_cache_req_stat.ls_rd_blk_c:u                                         (83.30%)
+       369,753,253      cache-misses:u                   #   12.44% of all cache refs           (83.34%)
+     2,971,775,280      cache-references:u                                                      (83.33%)
+
+       2.875718937 seconds time elapsed
+
+       2.791246000 seconds user
+       0.036388000 seconds sys
+
+
+22.30155640.68397587.3109823.14681083.00925447.2428444921849.0000004869833.5000004977453.500000
+ Performance counter stats for './memory_bound_bench':
+
+     4,604,694,696      L1-dcache-loads:u                                                       (83.32%)
+     2,147,425,966      L1-dcache-load-misses:u          #   46.64% of all L1-dcache accesses   (83.32%)
+     1,789,641,153      l2_cache_req_stat.ls_rd_blk_l_hit_x:u                                        (83.35%)
+       360,569,971      l2_cache_req_stat.ls_rd_blk_c:u                                         (83.35%)
+       360,981,591      cache-misses:u                   #   11.98% of all cache refs           (83.35%)
+     3,012,030,277      cache-references:u                                                      (83.32%)
+
+       2.787683590 seconds time elapsed
+
+       2.706374000 seconds user
+       0.038411000 seconds sys
+
+
+21.14865156.5404368.71418950.77431970.44905157.5960625049448.0000004984518.5000005045937.000000
+ Performance counter stats for './memory_bound_bench':
+
+     4,602,983,717      L1-dcache-loads:u                                                       (83.32%)
+     2,146,563,297      L1-dcache-load-misses:u          #   46.63% of all L1-dcache accesses   (83.31%)
+     1,492,272,271      l2_cache_req_stat.ls_rd_blk_l_hit_x:u                                        (83.33%)
+       416,605,710      l2_cache_req_stat.ls_rd_blk_c:u                                         (83.35%)
+       417,223,907      cache-misses:u                   #   15.37% of all cache refs           (83.35%)
+     2,715,078,372      cache-references:u                                                      (83.33%)
+
+       2.787641979 seconds time elapsed
+
+       2.711428000 seconds user
+       0.033516000 seconds sys
+
+

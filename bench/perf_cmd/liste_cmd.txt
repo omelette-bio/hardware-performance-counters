@@ -1,5 +1,5 @@
 commande pour mesurer le nombre de loads cache l1 reussis, loads cache l1 echoues, loads caches l2 reussis, loads caches l2 echoues
-perf stat -e L1-dcache-loads,L1-dcache-load-misses,l2_cache_req_stat.ls_rd_blk_l_hit_x,l2_cache_req_stat.ls_rd_blk_c ./memory_bound_bench
+perf stat -e L1-dcache-loads,L1-dcache-load-misses,l2_cache_req_stat.ls_rd_blk_l_hit_x,l2_cache_req_stat.ls_rd_blk_c,l3_comb_clstr_state.request_miss ./memory_bound_bench
 
 l2_cache_req_stat.ls_rd_blk_l_hit_x
     [Core to L2 cacheable request access status (not including L2
