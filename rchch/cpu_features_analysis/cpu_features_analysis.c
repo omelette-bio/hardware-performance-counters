@@ -70,6 +70,7 @@ int main(int argc, char** argv) {
 	// if (argc > 1) leaf = (int)strtol(argv[1], NULL, 16);
     int features[32];
 	cpuid(LEAF, 0); // Example: Get extended feature flags
+	#ifdef AMD
 	for (int i=0; i<32; i++)
 	{
 		features[i] = (ecx >> i) & 1; 
@@ -82,5 +83,15 @@ int main(int argc, char** argv) {
 		if (features[j]) printf("%-50s supported\n", features_name[j]);
 		else printf("%-50s not supported\n", features_name[j]); 
 	}
+	#endif
+	#ifdef INTEL
+	for (int i=0; i<32; i++)
+		features[i] = (eax >> i) & 1;
+
+	for (int i=31; i>=0; i--) 
+		printf("%d ", features[i]);
+
+	printf("\n");
+	#endif
     return 0;
 }
