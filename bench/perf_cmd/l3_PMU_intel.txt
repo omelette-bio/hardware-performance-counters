@@ -1,0 +1,78 @@
+       [Core-originated cacheable requests that missed L3 (Except hardware
+        prefetches to the L3). Unit: cpu]
+  mem_load_l3_hit_retired.xsnp_fwd
+  mem_load_l3_hit_retired.xsnp_miss
+       [Retired load instructions whose data sources were L3 hit and
+  mem_load_l3_hit_retired.xsnp_no_fwd
+        load instruction,data was supplied by the L3 Supports address when
+  mem_load_l3_hit_retired.xsnp_none
+       [Retired load instructions whose data sources were hits in L3 without
+  mem_load_retired.l3_hit
+       [Retired load instructions with L3 cache hits as data sources Supports
+  mem_load_retired.l3_miss
+       [Retired load instructions missed L3 cache as data sources Supports
+  ocr.demand_data_rd.l3_hit.snoop_hit_with_fwd
+       [OCR.DEMAND_DATA_RD.L3_HIT.SNOOP_HIT_WITH_FWD. Unit: cpu]
+  ocr.demand_data_rd.l3_hit.snoop_hitm
+       [Counts demand data reads that hit a cacheline in the L3 where a snoop
+  ocr.demand_rfo.l3_hit.snoop_hitm
+        the L3 where a snoop hit in another cores caches,data forwarding is
+  cycle_activity.stalls_l3_miss
+       [Execution stalls while L3 cache miss demand load is outstanding. Unit:
+  offcore_requests.l3_miss_demand_data_rd
+       [Demand Data Read requests who miss L3 cache. Unit: cpu]
+  resctrl:pseudo_lock_l3                             [Tracepoint event]
+  tma_l3_hit_latency
+        that hit the L3 cache under unloaded scenarios (possibly L3 latency
+  tma_l3_bound
+        accesses to L3 cache or contended with a sibling Core]
+  tma_info_memory_core_l3_cache_access_bw_2t
+       [Average per-core data access bandwidth to the L3 cache [GB / sec]]
+  tma_info_memory_core_l3_cache_fill_bw_2t
+       [Average per-core data fill bandwidth to the L3 cache [GB / sec]]
+  tma_info_memory_l3_cache_access_bw
+       [Average per-thread data access bandwidth to the L3 cache [GB / sec]]
+  tma_info_memory_l3_cache_fill_bw
+       [Average per-thread data fill bandwidth to the L3 cache [GB / sec]]
+  tma_info_memory_l3mpki
+       [L3 cache true misses per kilo instruction for retired demand loads]
+  tma_info_memory_core_l3_cache_access_bw_2t
+       [Average per-core data access bandwidth to the L3 cache [GB / sec]]
+  tma_info_memory_core_l3_cache_fill_bw_2t
+       [Average per-core data fill bandwidth to the L3 cache [GB / sec]]
+  tma_info_memory_l3_cache_access_bw
+       [Average per-thread data access bandwidth to the L3 cache [GB / sec]]
+  tma_info_memory_l3_cache_fill_bw
+       [Average per-thread data fill bandwidth to the L3 cache [GB / sec]]
+  tma_l3_bound
+        accesses to L3 cache or contended with a sibling Core]
+  tma_l3_hit_latency
+        that hit the L3 cache under unloaded scenarios (possibly L3 latency
+  tma_info_memory_latency_load_l3_miss_latency
+       [Average Latency for L3 cache miss demand Loads]
+  tma_info_memory_core_l3_cache_access_bw_2t
+       [Average per-core data access bandwidth to the L3 cache [GB / sec]]
+  tma_info_memory_l3_cache_access_bw
+       [Average per-thread data access bandwidth to the L3 cache [GB / sec]]
+  tma_info_memory_latency_load_l3_miss_latency
+       [Average Latency for L3 cache miss demand Loads]
+TmaL3mem: [Grouping from Top-down Microarchitecture Analysis Metrics spreadsheet]
+  tma_l3_bound
+        accesses to L3 cache or contended with a sibling Core]
+TopdownL3: [Metrics for top-down breakdown at level 3]
+  tma_l3_bound
+        accesses to L3 cache or contended with a sibling Core]
+  tma_l3_hit_latency
+        that hit the L3 cache under unloaded scenarios (possibly L3 latency
+tma_L3_group: [Metrics for top-down breakdown at level 3]
+  tma_l3_bound
+        accesses to L3 cache or contended with a sibling Core]
+  tma_l3_hit_latency
+        that hit the L3 cache under unloaded scenarios (possibly L3 latency
+  tma_l3_hit_latency
+        that hit the L3 cache under unloaded scenarios (possibly L3 latency
+tma_l3_bound_group: [Metrics contributing to tma_l3_bound category]
+  tma_l3_hit_latency
+        that hit the L3 cache under unloaded scenarios (possibly L3 latency
+  tma_l3_bound
+        accesses to L3 cache or contended with a sibling Core]

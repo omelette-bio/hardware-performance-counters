@@ -25,3 +25,22 @@ https://github.com/RRZE-HPC/likwid/wiki/Zen2
 AMD:
 - compteurs custom : 6
 - compteurs fixes : 3
+
+SNOOPING
+cache coherence mechanism used in multi-core processors with shared variable
+makes sure variables are always updated without checking the memory
+how does it works ?
+- core request value 
+- other check value 
+- if one core has the latest value
+  - send updated data
+- if no core has the latest value 
+  - fetch memory
+
+
+0x80000008 -> gives informations about address size 
+for exemple on my intel cpu i have in eax register 0x3027
+  0x27 = 0d39 so physical address size of 39 bits (512Go of physical memory)
+  0x30 = 0d48 so logical address size of 48 bits (256To of virtual memory)
+
+
