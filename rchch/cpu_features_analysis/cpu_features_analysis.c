@@ -89,9 +89,14 @@ int main(int argc, char** argv) {
 		features[i] = (eax >> i) & 1;
 
 	for (int i=31; i>=0; i--) 
-		printf("%d ", features[i]);
-
-	printf("\n");
+  {
+		printf("%d", features[i]);
+    if (i%4 == 0) printf(" ");
+  }
+  printf("\n");
+  printf("Performance monitoring version : %d\n", eax & 0xff);
+  printf("Number of MSRs per logical processor : %d\n", (eax >> 8) & 0xff);
+  printf("Bit width of an IA32_PMCx MSR : %d\n", (eax >> 16) & 0xff);
 	#endif
     return 0;
 }

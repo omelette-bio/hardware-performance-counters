@@ -43,4 +43,9 @@ for exemple on my intel cpu i have in eax register 0x3027
   0x27 = 0d39 so physical address size of 39 bits (512Go of physical memory)
   0x30 = 0d48 so logical address size of 48 bits (256To of virtual memory)
 
+0x0A -> Architectural Performance Monitoring
+in eax
+  [7:0] -> version number
+  [15:8] -> number of MSR per logical core 
+  [23:16] -> bit width of an IA32_PMCx MSR 
 
