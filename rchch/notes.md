@@ -12,3 +12,13 @@ ce qui est important ici, ce sont les bits 23, 24 et 28, qui nous donnent respec
 
 ### pour INTEL
 je sais pas en sah
+
+
+## trucs un peu random
+
+`PFM_OS_PERF_EVENT` tells encoding function to use the Linux Perf API to encode
+
+## bordel que je dois checker
+linux perf API -> c'est bien que j'en entende parler que maintenant HAHAAHAHHA
+privilege level mask -> ????
+
