@@ -59,6 +59,27 @@ char *features_name[32] = {
 	"Reserved"
 };
 
+
+char *pre_defined_architectural_perf_events[13] =
+    {
+      "UnHalted Core Cycles (umask=00H,event=3CH)",
+      "Instruction Retired (umask=00H,event=C0H)",
+      "UnHalted Reference Cycles (umask=01H,event=3CH)",
+      "LLC Reference (umask=4FH,event=2EH)",
+      "LLC Misses (umask=41H,event=2EH)",
+      "Branch Instruction Retired (umask=00H,event=C4H)",
+      "Branch Misses Retired (umask=00H,event=C5H)",
+      "Topdown Slots (umask=01H,event=A4H)",
+      "Topdown Backend Bound (umask=02H,event=A4H)",
+      "Topdown Bad Speculation (umask=00H,event=73H)",
+      "Topdown Frontend Bound (umask=01H,event=9CH)",
+      "Topdown Retiring (umask=02H,event=C2H)",
+      "LBR Inserts (umask=01H,event=E4H)"
+    };
+// pour intel 
+// fixed counter enumeration
+// FxCtr[i]_is_supported := ECX[i] || (EDX[4:0] > i);
+
 void cpuid(uint32_t leaf, uint32_t subleaf) {
     __asm__ volatile ("cpuid"
                       : "=a"(eax), "=b"(ebx), "=c"(ecx), "=d"(edx)
@@ -68,9 +89,14 @@ void cpuid(uint32_t leaf, uint32_t subleaf) {
 
 int main(int argc, char** argv) {
 	// if (argc > 1) leaf = (int)strtol(argv[1], NULL, 16);
-    int features[32];
-	cpuid(LEAF, 0); // Example: Get extended feature flags
-	#ifdef AMD
+  int features_eax[32];
+  int features_ecx[32];
+  int features_edx[32];
+  
+  printf("checking through CPUID.0x%XH\n\n", LEAF);
+  cpuid(LEAF, 0); // Example: Get extended feature flags
+
+  #ifdef AMD
 	for (int i=0; i<32; i++)
 	{
 		features[i] = (ecx >> i) & 1; 
@@ -85,18 +111,35 @@ int main(int argc, char** argv) {
 	}
 	#endif
 	#ifdef INTEL
-	for (int i=0; i<32; i++)
-		features[i] = (eax >> i) & 1;
 
-	for (int i=31; i>=0; i--) 
-  {
-		printf("%d", features[i]);
-    if (i%4 == 0) printf(" ");
-  }
+ 	
+  for (int i=0; i<32; i++)
+		features_ecx[i] = (ecx >> i) & 1;
+
+  for (int i=0; i<32; i++) if (features_ecx[i]) printf("Fixed counter %d supported\n", i);
+	
   printf("\n");
-  printf("Performance monitoring version : %d\n", eax & 0xff);
-  printf("Number of MSRs per logical processor : %d\n", (eax >> 8) & 0xff);
-  printf("Bit width of an IA32_PMCx MSR : %d\n", (eax >> 16) & 0xff);
+  printf("%-40s %d\n", "Performance monitoring version", eax & 0xff);
+  printf("%-40s %d\n", "Bit width of an IA32_PMCx MSR", (eax >> 16) & 0xff);
+  printf("%-40s %d\n", "Number of general purpose PMC", (eax >> 8) & 0xff);
+  printf("%-40s %d\n", "Number of fixed PMC", edx & 0xff);
+  int arch_ev = (eax >> 24) & 0xff;
+  printf("%-40s %d\n","Number of architectural events", arch_ev);
+  
+
+  uint32_t eax_b, ebx_b, ecx_b, edx_b;
+  eax_b = eax;
+  ebx_b = ebx;
+  ecx_b = ecx;
+  edx_b = edx;
+
+
+  printf("\nPREDEFINED ARCHITECTURAL EVENTS : \n");
+  for (int i=0; i<arch_ev; i++)
+  {
+    if ((ebx >> i) & 1) printf("%-50s not supported\n", pre_defined_architectural_perf_events[i]);
+    else printf("%-50s supported\n", pre_defined_architectural_perf_events[i]);
+  }
 	#endif
     return 0;
 }

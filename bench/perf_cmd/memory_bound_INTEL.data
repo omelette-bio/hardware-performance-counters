@@ -1,0 +1,64 @@
+
+ Performance counter stats for './memory_bound_bench':
+
+     5,261,087,385      L1-dcache-load-misses:u                                                 (83.33%)
+     1,026,132,601      l2_rqsts.miss:u                                                         (66.67%)
+       707,626,839      cache-misses:u                                                          (83.34%)
+               100      LLC-store-misses:u                                                      (83.33%)
+       252,068,014      LLC-load-misses:u                                                       (83.34%)
+       163,981,563      L1-dcache-stores:u                                                      (83.33%)
+
+      11.922259687 seconds time elapsed
+
+      11.812244000 seconds user
+       0.042763000 seconds sys
+
+
+
+ Performance counter stats for './memory_bound_bench':
+
+     5,299,636,040      L1-dcache-load-misses:u                                                 (83.33%)
+     1,025,027,403      l2_rqsts.miss:u                                                         (66.66%)
+       707,808,017      cache-misses:u                                                          (83.33%)
+               115      LLC-store-misses:u                                                      (83.33%)
+       260,796,033      LLC-load-misses:u                                                       (83.34%)
+       163,658,571      L1-dcache-stores:u                                                      (83.33%)
+
+      12.753680268 seconds time elapsed
+
+      12.643923000 seconds user
+       0.034756000 seconds sys
+
+
+
+ Performance counter stats for './memory_bound_bench':
+
+     5,262,380,651      L1-dcache-load-misses:u                                                 (83.33%)
+     1,024,948,257      l2_rqsts.miss:u                                                         (66.66%)
+       708,014,926      cache-misses:u                                                          (83.33%)
+               101      LLC-store-misses:u                                                      (83.34%)
+       253,681,985      LLC-load-misses:u                                                       (83.33%)
+       164,084,028      L1-dcache-stores:u                                                      (83.34%)
+
+      11.937708834 seconds time elapsed
+
+      11.836432000 seconds user
+       0.034802000 seconds sys
+
+
+
+ Performance counter stats for './memory_bound_bench':
+
+     5,259,606,250      L1-dcache-load-misses:u                                                 (83.33%)
+     1,028,250,593      l2_rqsts.miss:u                                                         (66.66%)
+       706,938,246      cache-misses:u                                                          (83.33%)
+               117      LLC-store-misses:u                                                      (83.33%)
+       251,353,451      LLC-load-misses:u                                                       (83.34%)
+       164,150,474      L1-dcache-stores:u                                                      (83.33%)
+
+      11.896338005 seconds time elapsed
+
+      11.791519000 seconds user
+       0.036804000 seconds sys
+
+

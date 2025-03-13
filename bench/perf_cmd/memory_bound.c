@@ -4,15 +4,15 @@
 #include <time.h>
 
 #ifndef N
-#define N 2000
+#define N 2500
 #endif
 
 #ifndef M
-#define M 2000
+#define M 2500
 #endif
 
 #ifndef P
-#define P 2000
+#define P 2500
 #endif
 
 #define MAX_RANGE 100
