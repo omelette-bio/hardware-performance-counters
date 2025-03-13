@@ -52,7 +52,7 @@ main(int argc, const char **argv)
 	const char *arg[3];
 	const char **p;
 	char *fqstr;
-	pfm_event_info_t info;
+	pfm_event_info_t info, einfo;
 	int j, ret;
 	pfm_pmu_t i;
 	int total_supported_events = 0;
@@ -82,8 +82,18 @@ main(int argc, const char **argv)
 		ret = pfm_get_pmu_info(i, &pinfo);
 		if (ret != PFM_SUCCESS)
 			continue;
+		
 		if (pinfo.is_present) {
 			printf("\t[%d, %s, \"%s\"]\n", i, pinfo.name, pinfo.desc);
+			for (j = 0; j < pinfo.nevents; j++) {
+                ret = pfm_get_event_info(i, j, &einfo);
+                if (ret == PFM_SUCCESS) {
+                    // Print the event details
+                    printf("\t\tEvent %d: %s - %s\n", j, einfo.name, einfo.desc);
+                } else {
+                    printf("\t\tFailed to retrieve event %d info\n", j);
+                }
+            }
 			total_supported_events += pinfo.nevents;
 		}
 		total_available_events += pinfo.nevents;
@@ -96,7 +106,7 @@ main(int argc, const char **argv)
 	 */
 	if (argc < 2  && pmu_is_present(PFM_PMU_PERF_EVENT)) {
 		arg[0] = "PERF_COUNT_HW_CPU_CYCLES";
-		arg[1] = "PERF_COUNT_HW_INSTRUCTIONS";
+		arg[1] = "l2_cache_req_stat.ls_rd_blk_l_hit_x";
 		arg[2] = NULL;
 		p = arg;
 	} else {

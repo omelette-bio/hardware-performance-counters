@@ -21,4 +21,4 @@ je sais pas en sah
 ## bordel que je dois checker
 linux perf API -> c'est bien que j'en entende parler que maintenant HAHAAHAHHA
 privilege level mask -> ????
-
+regarder les MSRs

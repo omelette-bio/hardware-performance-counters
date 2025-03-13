@@ -9,13 +9,4 @@ for i in f.readlines():
     if (len(words) < 2): continue
 
     if (words[1] in events):
-        data[words[1]] = int(words[0].replace(",", ""))
-        try:
-            count[words[1]] += count[words[1]]+1 
-        except:
-            count[words[1]] = 1
-
-for i in data.keys():
-    data[i] = data[i] / count[i]
-
-print(data)
+        print(f"{words[1]} : {words[0]}")
