@@ -81,6 +81,7 @@ char *pre_defined_architectural_perf_events[13] =
 // FxCtr[i]_is_supported := ECX[i] || (EDX[4:0] > i);
 
 void cpuid(uint32_t leaf, uint32_t subleaf) {
+    eax = ebx = ecx = edx = 0xDEADBEEF;
     __asm__ volatile ("cpuid"
                       : "=a"(eax), "=b"(ebx), "=c"(ecx), "=d"(edx)
                       : "a"(leaf), "c"(subleaf));
@@ -111,7 +112,6 @@ int main(int argc, char** argv) {
 	}
 	#endif
 	#ifdef INTEL
-
  	
   for (int i=0; i<32; i++)
 		features_ecx[i] = (ecx >> i) & 1;
@@ -141,5 +141,5 @@ int main(int argc, char** argv) {
     else printf("%-50s supported\n", pre_defined_architectural_perf_events[i]);
   }
 	#endif
-    return 0;
+  return 0;
 }
