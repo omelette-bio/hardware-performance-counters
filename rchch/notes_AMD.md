@@ -31,4 +31,11 @@ to complete a specific hardware function.
 ok definitivement pas mesure de cache l3 
 -> information erronee de la part de CPUID Fn8000_0001_ECX[PerfCtrExtL3], peut-etre parce que le manuel date de apres la sortie de mon cpu, ou le micro-logiciel de mon cpu est pas a jour.
 
+2 types de MSR :
+- Core::X86::Msr::PERF_CTL : definissent l'event qui doit etre mesure, est lie avec un registre Core::X86::Msr::PERF_CTR et sont notes MSRC001_02X[A,8,6,4,2,0]
+- Core::X86::Msr::PERF_CTR : sont les registres qui comptent les events, donc litteralement les compteurs materiels de performance, ils sont notes MSRC001_02X[B,9,7,5,3,1]
 
+X correspond au groupe d'evenements, par exemple 0 est le groupe des evenements classiques, nombre de cycles, instructions, branchements, ....
+les groupes sont definis comme dans la partie avec CPUID.
+
+et pour chaque groupe, les PERF_CTL MSRs ne contiennent pas la meme information, (et la dans le rapport montrer les tables faites pour chaque (?) PERF_CTL MSR).

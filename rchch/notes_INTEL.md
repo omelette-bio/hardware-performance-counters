@@ -4,9 +4,6 @@ core, uncore et offcore
 
 site pour intel : https://perfmon-events.intel.com/ et regarder dans tigerlake
 
-pour amd j'en ai aucune idee je check vendredi en sah
-
-
 pour trouver des events un peu generiques avec leur code
 /sys/devices/cpu/events
 
@@ -20,12 +17,6 @@ INTEL:
 - compteurs fixes : 4 (1 inutile) (retired instructions, cpu cycles, unhalted cpu cycles)
 - top-down metrics (?) manquants, limite les analyses de "stall"
 
-
-https://github.com/RRZE-HPC/likwid/wiki/Zen2
-AMD:
-- compteurs custom : 6
-- compteurs fixes : 3
-
 SNOOPING
 cache coherence mechanism used in multi-core processors with shared variable
 makes sure variables are always updated without checking the memory
@@ -37,7 +28,6 @@ how does it works ?
 - if no core has the latest value 
   - fetch memory
 
-
 0x80000008 -> gives informations about address size 
 for exemple on my intel cpu i have in eax register 0x3027
   0x27 = 0d39 so physical address size of 39 bits (512Go of physical memory)
@@ -45,7 +35,25 @@ for exemple on my intel cpu i have in eax register 0x3027
 
 0x0A -> Architectural Performance Monitoring
 in eax
-  [7:0] -> version number
-  [15:8] -> number of MSR per logical core 
-  [23:16] -> bit width of an IA32_PMCx MSR 
+    [7:0] -> version number
+    [15:8] -> number of MSR per logical core 
+    [23:16] -> bit width of an IA32_PMCx MSR 
+    [31:24] -> number of architecural events 
 
+in edx 
+    [7:0] -> number of fixed PMC
+
+non-zero bits in ebx indicates that an architectural event is not supported, the bit index corresponds to a specific event:
+    0: UnHalted Core Cycles (umask=00H,event=3CH)
+    1: Instruction Retired (umask=00H,event=C0H)
+    2: UnHalted Reference Cycles (umask=01H,event=3CH)
+    3: LLC Reference (umask=4FH,event=2EH)
+    4: LLC Misses (umask=41H,event=2EH)
+    5: Branch Instruction Retired (umask=00H,event=C4H)
+    6: Branch Misses Retired (umask=00H,event=C5H)
+    7: Topdown Slots (umask=01H,event=A4H)
+    8: Topdown Backend Bound (umask=02H,event=A4H)
+    9: Topdown Bad Speculation (umask=00H,event=73H)
+    10: Topdown Frontend Bound (umask=01H,event=9CH)
+    11: Topdown Retiring (umask=02H,event=C2H)
+    12: LBR Inserts (umask=01H,event=E4H)

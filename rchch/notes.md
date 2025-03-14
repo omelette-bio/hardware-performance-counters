@@ -22,3 +22,10 @@ je sais pas en sah
 linux perf API -> c'est bien que j'en entende parler que maintenant HAHAAHAHHA
 privilege level mask -> ????
 regarder les MSRs
+
+
+## choses que je dois savoir en plus
+- est-ce que c'est bien si je fais des parralleles avec mon proc dans le rapport
+
+## linux perf API 
+propose une API qui peut etre utilisee en ligne de commande avec perf ou en C avec libperf
