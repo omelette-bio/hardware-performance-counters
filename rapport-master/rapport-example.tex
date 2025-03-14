@@ -1,8 +1,65 @@
-\documentclass{article}
-\usepackage{tikz}
-\usepackage{float}
+\documentclass{rapport}
+\usepackage[utf8]{inputenc}
+
+\usepackage{pifont} % Pour les symboles appelés par la macro \ding
+\usepackage{url} % Comme son nom l'indique, pour les url...
+
+\usetikzlibrary{positioning} % Bibliothèque tikz pour positionner des nœuds relativement à d'autres
+
+\usepackage[colorlinks, citecolor=red!60!green, linkcolor=blue!60!green, urlcolor=magenta]{hyperref} % Pour que les liens soient cliquables. Les options permettent de mettre les liens en couleur.
+
+\usepackage{algorithm}
+\usepackage{algo}
+\usepackage{colorationSyntaxique}
+
+
+% Pour un rapport en français 
+% \usepackage[francais]{babel} % Commenter pour un rapport en anglais
+% \renewcommand\bibsection{\section*{Bibliographie}} % Commenter pour un rapport en anglais
+
+\englishTitlePage % Décommenter pour une page de titre en anglais
+
+
+\pagestyle{fancy}
+\renewcommand{\sectionmark}[1]{\markboth{\thesection.\ #1}{}}
+\fancyfoot{}
+
+\fancyhead[LE]{\textsl{\leftmark}}
+\fancyhead[RE, LO]{\textbf{\thepage}}
+\fancyhead[RO]{\textsl{\rightmark}}
+
+\def\Latex{\LaTeX\xspace}
+\def\etc{\textit{etc.}\xspace}
+
+
+
+\title{Hardware Performance Counters}
+\author{Francois Flandin}
+\supervisor{Sid Touati}
+\date{Second semestre de l'année 2024-2025}
+
+\universityname{Université Côte d'Azur} % Nom de l'université.
+\type{TER} % Type de document
+\formation{Master Informatique} % Nom de la formation
+
+% Retrouver les autres options possibles dans le document rapport.pdf
+
 \begin{document}
-    \begin{figure}[H]
+
+  \maketitle
+
+  \begin{abstract}
+    Calmos le ramoloss, l'abstract c'est pas pour tout de suite
+  \end{abstract}
+
+  \clearpage
+  \tableofcontents
+
+  \clearpage
+    
+  \section{Hardware Performance Monitoring on AMD CPUs}
+
+  \begin{figure}[H]
         \centering
         \makebox[\textwidth]{
     	\begin{tikzpicture}
@@ -92,5 +149,10 @@
 	   \label{fig:figure1}
 	   \caption{AMD Bit Repartition of \texttt{Event Select MSRC001\_020[A,8,6,4,2,0]}}
 	\end{figure}
+
+  \section{Hardware Performance Monitoring on INTEL CPUs}
+  \pageblanche
+  \bibliographystyle{apalike-fr}
+  \bibliography{biblio}
 
 \end{document}
