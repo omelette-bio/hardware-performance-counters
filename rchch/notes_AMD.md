@@ -30,3 +30,5 @@ to complete a specific hardware function.
 
 ok definitivement pas mesure de cache l3 
 -> information erronee de la part de CPUID Fn8000_0001_ECX[PerfCtrExtL3], peut-etre parce que le manuel date de apres la sortie de mon cpu, ou le micro-logiciel de mon cpu est pas a jour.
+
+
