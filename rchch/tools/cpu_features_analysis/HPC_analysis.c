@@ -4,11 +4,12 @@
 
 #ifdef AMD 
 #define LEAF 0x80000001
+#elif INTEL
+#define LEAF 0xA
+#else
+#define LEAF 0x0
 #endif
 
-#ifdef INTEL
-#define LEAF 0xA
-#endif
 
 // AMD 0x80000001
 // SSE INSTRUCTIONS SUBSETS
@@ -24,6 +25,7 @@
 
 
 uint32_t eax, ebx, ecx, edx;
+/*
 char *features_name[32] = {
 	"LAHF and SAHF instructions", 
 	"Core multi-processing legacy mode", 
@@ -58,7 +60,7 @@ char *features_name[32] = {
 	"Breakpoint Addressing masking extended to bit 31",
 	"Reserved"
 };
-
+*/ 
 
 char *pre_defined_architectural_perf_events[13] =
     {
@@ -76,6 +78,7 @@ char *pre_defined_architectural_perf_events[13] =
       "Topdown Retiring (umask=02H,event=C2H)",
       "LBR Inserts (umask=01H,event=E4H)"
     };
+
 // pour intel 
 // fixed counter enumeration
 // FxCtr[i]_is_supported := ECX[i] || (EDX[4:0] > i);
@@ -90,56 +93,51 @@ void cpuid(uint32_t leaf, uint32_t subleaf) {
 
 int main(int argc, char** argv) {
 	// if (argc > 1) leaf = (int)strtol(argv[1], NULL, 16);
-  int features_eax[32];
-  int features_ecx[32];
-  int features_edx[32];
+	int features_eax[32];
+	int features_ecx[32];
+	int features_edx[32];
   
-  printf("checking through CPUID.0x%XH\n\n", LEAF);
-  cpuid(LEAF, 0); // Example: Get extended feature flags
+	printf("checking through CPUID.0x%XH\n\n", LEAF);
+	cpuid(LEAF, 0); // Example: Get extended feature flags
 
-  #ifdef AMD
-	for (int i=0; i<32; i++)
-	{
-		features[i] = (ecx >> i) & 1; 
-	}
-	for (int i=31; i>=0; i--) printf("%d ", features[i]);
+	#ifdef AMD
 	printf("\n");
-	for (int j=0; j<32; j++)
-	{
-		printf("%2d : ", j);
-		if (features[j]) printf("%-50s supported\n", features_name[j]);
-		else printf("%-50s not supported\n", features_name[j]); 
-	}
+	if ((ecx >> 23) & 1) printf("6 Core Performance Counters\n\t(MSRC001_020[A,8,6,4,2,0] and MSRC001_020[B,9,7,5,3,1]).\n");
+	else printf("No Core Performance Counter.\n");
+	if ((ecx >> 24) & 1) printf("4 NorthBridge Performance Counters\n\t(MSRC001_024[6,4,2,0] and MSRC001_024[7,5,3,1]).\n");
+	else printf("No NorthBridge Performance Counter.\n");
+	if ((ecx >> 25) & 1) printf("4 L2 Cache Performance Counters\n\t().\n");
+	else printf("No L2 Cache Performance Counter.\n");
 	#endif
 	#ifdef INTEL
- 	
-  for (int i=0; i<32; i++)
+
+	for (int i=0; i<32; i++)
 		features_ecx[i] = (ecx >> i) & 1;
 
-  for (int i=0; i<32; i++) if (features_ecx[i]) printf("Fixed counter %d supported\n", i);
+	for (int i=0; i<32; i++) if (features_ecx[i]) printf("Fixed counter %d supported\n", i);
 	
-  printf("\n");
-  printf("%-40s %d\n", "Performance monitoring version", eax & 0xff);
-  printf("%-40s %d\n", "Bit width of an IA32_PMCx MSR", (eax >> 16) & 0xff);
-  printf("%-40s %d\n", "Number of general purpose PMC", (eax >> 8) & 0xff);
-  printf("%-40s %d\n", "Number of fixed PMC", edx & 0xff);
-  int arch_ev = (eax >> 24) & 0xff;
-  printf("%-40s %d\n","Number of architectural events", arch_ev);
+	printf("\n");
+	printf("%-40s %d\n", "Performance monitoring version", eax & 0xff);
+	printf("%-40s %d\n", "Bit width of an IA32_PMCx MSR", (eax >> 16) & 0xff);
+	printf("%-40s %d\n", "Number of general purpose PMC", (eax >> 8) & 0xff);
+	printf("%-40s %d\n", "Number of fixed PMC", edx & 0xff);
+	int arch_ev = (eax >> 24) & 0xff;
+	printf("%-40s %d\n","Number of architectural events", arch_ev);
   
+	/*
+	uint32_t eax_b, ebx_b, ecx_b, edx_b;
+	eax_b = eax;
+	ebx_b = ebx;
+	ecx_b = ecx;
+	edx_b = edx;
+	*/
 
-  uint32_t eax_b, ebx_b, ecx_b, edx_b;
-  eax_b = eax;
-  ebx_b = ebx;
-  ecx_b = ecx;
-  edx_b = edx;
-
-
-  printf("\nPREDEFINED ARCHITECTURAL EVENTS : \n");
-  for (int i=0; i<arch_ev; i++)
-  {
-    if ((ebx >> i) & 1) printf("%-50s not supported\n", pre_defined_architectural_perf_events[i]);
-    else printf("%-50s supported\n", pre_defined_architectural_perf_events[i]);
-  }
+	printf("\nPREDEFINED ARCHITECTURAL EVENTS : \n");
+	for (int i=0; i<arch_ev; i++)
+	{
+		if ((ebx >> i) & 1) printf("%-50s not supported\n", pre_defined_architectural_perf_events[i]);
+		else printf("%-50s supported\n", pre_defined_architectural_perf_events[i]);
+	}
 	#endif
   return 0;
 }
