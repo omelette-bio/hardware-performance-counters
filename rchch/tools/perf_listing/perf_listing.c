@@ -33,7 +33,7 @@ int main() {
 				errx(1, "cannot get event info");
 
 			if (pfm_find_event(einfo.name) && pinfo.is_present)
-				printf("  %s\n",einfo.name);
+				printf("  %s\n	  (%s)\n",einfo.name,einfo.desc);
 		}
 		printf("\n");
 	}
