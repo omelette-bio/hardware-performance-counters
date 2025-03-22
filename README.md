@@ -1,18 +1,21 @@
 # PROJET TUTORAT S2 M1 INFORMATIQUE
 
-Le projet porte sur les compteurs matériels de performances.
+This project is about Hardware Performance Counters
 
-## Objectifs
+## Goals
 
-- Decouvrir les evenements analysables sur un cpu (dans mon cas, AMD ryzen 5 3600X/INTEL core i5 11 jspluquoi)
-- Decouvrir les compteurs matériels dans leur integralite (je crois c'est moi qui pousse un peu loin)
-- Faire des benchmarks memory-bound et cpu-bound
+- Discover the different events available on a cpu (in my case, AMD ryzen 5 3600X and INTEL core i5-1135G7)
+- Do some memory-bound and cpu-bound benchmarks using either the perf tool on linux or the libpfm c library
+- Discover how HPC works (but maybe im pushing the project a bit too far)
 
-## Avancee
+## What has been done 
 
-- Programme permettant de checker les registres necessaires aux HPC (hardware performance counter)
-- Programme permettant de faire la liste des events 
-- Pas mal d'infos sur amd/intel 
+- Small program capable of analysing HPC capabilities on a cpu 
+- Small program capable of analysing the PMUs of a cpu and the events attached to it 
+- What is libpfm (only on the surface)
+- Which registers are involved on AMD cpus 
+- Which informations gives cpuid instruction on intel/amd 
+- Benchmarks using perf command (only with memory-bound)
 
 ## Sources
 
@@ -21,3 +24,5 @@ Le projet porte sur les compteurs matériels de performances.
     - AMD64 Architecture Programmer's Manual Volume 2 : System Programming and Volume 3 : General-Purpose and System Instructions
 - Manuel INTEL 
     - Intel 64 and IA-32 Architectures Software Developer's Manual
+
+

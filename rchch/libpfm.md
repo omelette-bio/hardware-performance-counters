@@ -19,3 +19,16 @@ comment utiliser libpfm
 - `E`: flags
 
 checker en profondeur ce que fait ioctl
+
+
+enfait libpfm permet juste d'encoder les evenements pour mesurer ensuite, avec les fonctions systeme perf_event_open, qui retourne un file descriptor
+ioctl et prctl pour activer/desactiver un evenement 
+
+At its core, the library provides a simple translation service, whereby a  user specifies  an  event to measure as a string and the library returns the parameters needed to invoke the kernel API. It is important to realize that  the  library does not make the system call to program the event.
+
+When the library is initialized via pfm_initialize(), it first detects the  underlying hardware and software configuration.  Based on this information it enables certain PMU support.  Multiple events tables may be activated.
+
+
+sources:
+    - man perf_event_open
+    - man libpfm

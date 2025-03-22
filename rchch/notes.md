@@ -1,6 +1,5 @@
-
 ## cpuid
-instruction x86 qui permet d'avoir plein d'informations sur le processeur que l'on utilise, et demande un code, une `leaf` pour aller dans un repertoire specifique d'informationsqui nous donnera des informations dans quatres registres, sous la forme de nombres de 32 bits hexadecimaux.
+instruction x86 qui permet d'avoir plein d'informations sur le processeur que l'on utilise, et demande un code, une `leaf` pour aller dans un repertoire specifique d'informationsqui nous donnera des informations dans quatres registres eax ebx ecx edx, sous la forme de nombres de 32 bits hexadecimaux.
 
 chaque bit correspond a une fonctionnalite decrite dans le manuel AMD(AMD64 Architecture Programmer’s Manual Volume 3: General-Purpose and System Instructions)/INTEL
 
@@ -29,3 +28,9 @@ regarder les MSRs
 
 ## linux perf API 
 propose une API qui peut etre utilisee en ligne de commande avec perf ou en C avec libperf
+
+Events come in two flavors: counting and sampled.  A counting event is one that
+       is  used  for  counting the aggregate number of events that occur.  In general,
+       counting event results are gathered with a read(2) call.  A sampling event  pe‐
+       riodically  writes  measurements  to  a  buffer  that  can then be accessed via
+       mmap(2).

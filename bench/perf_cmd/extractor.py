@@ -3,10 +3,11 @@ events = ('L1-dcache-loads:u', 'L1-dcache-load-misses:u', 'l2_cache_req_stat.ls_
 data=dict()
 count=dict()
 
-f = open('memory_bound_INTEL.data','r')
+f = open('memory_bound_AMD.data','r')
+print("event, quantity")
 for i in f.readlines():
     words = i.split()
     if (len(words) < 2): continue
 
     if (words[1] in events):
-        print(f"{words[1]} : {words[0]}")
+        print(f"{words[1]}, {"".join(words[0].split(","))}")
