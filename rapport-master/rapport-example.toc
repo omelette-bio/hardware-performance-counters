@@ -1,3 +1,0 @@
-\contentsline {section}{\numberline {1}Introduction}{3}{section.1}%
-\contentsline {section}{\numberline {2}Hardware Performance Monitoring on AMD CPUs}{4}{section.2}%
-\contentsline {section}{\numberline {3}Hardware Performance Monitoring on INTEL CPUs}{4}{section.3}%
