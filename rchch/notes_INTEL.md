@@ -57,3 +57,6 @@ non-zero bits in ebx indicates that an architectural event is not supported, the
     10: Topdown Frontend Bound (umask=01H,event=9CH)
     11: Topdown Retiring (umask=02H,event=C2H)
     12: LBR Inserts (umask=01H,event=E4H)
+
+pmc introduits avec les processeurs pentium
+

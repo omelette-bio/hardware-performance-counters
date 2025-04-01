@@ -12,7 +12,6 @@ ce qui est important ici, ce sont les bits 23, 24 et 28, qui nous donnent respec
 ### pour INTEL
 je sais pas en sah
 
-
 ## trucs un peu random
 
 `PFM_OS_PERF_EVENT` tells encoding function to use the Linux Perf API to encode
@@ -34,3 +33,10 @@ Events come in two flavors: counting and sampled.  A counting event is one that
        counting event results are gathered with a read(2) call.  A sampling event  pe‐
        riodically  writes  measurements  to  a  buffer  that  can then be accessed via
        mmap(2).
+
+
+## MSRs 
+intel:
+    nombre fini de registres de selection d'events (IA32_PERFEVTSELx)
+    resultats dans les registres (IA32_PMCx)
+    les adresses restent les memes pour chaque archi
