@@ -40,3 +40,35 @@ intel:
     nombre fini de registres de selection d'events (IA32_PERFEVTSELx)
     resultats dans les registres (IA32_PMCx)
     les adresses restent les memes pour chaque archi
+
+
+## utiliser les compteurs de perf
+en gros pour compter un evenement
+- remplir les informations de l'evenement que l'on souhaite mesurer grace aux event select msrs (IA32_PERFEVTSELx sur INTEL et jsplu sur AMD)
+- ecrire "1" dans le bit EN avec l'instruction WRMSR, la mesure commence a la fin de l'execution de l'instructions
+- si on veut arreter, ecrire "0" dans le bit EN avec l'instruction WRMSR.
+
+
+
+## plan ?
+
+- c'est quoi un compteur materiel de performances
+
+TROUVER LES COMPTEURS COMPATIBLES
+- commande cpuid
+- comment lister les evenements materiels disponibles
+
+HPCs ON X86 CPUs
+- comment lancer des compteurs
+- HPC sur intel
+- HPC sur AMD
+
+BENCHMARKs
+- benchmarks avec commande perf
+    - linux perf api
+    - resultats
+- benchmarks plus precis : libpfm
+    - presentation libpfm
+    - resultats
+
+

@@ -39,3 +39,14 @@ X correspond au groupe d'evenements, par exemple 0 est le groupe des evenements 
 les groupes sont definis comme dans la partie avec CPUID.
 
 et pour chaque groupe, les PERF_CTL MSRs ne contiennent pas la meme information, (et la dans le rapport montrer les tables faites pour chaque (?) PERF_CTL MSR).
+
+compteur demarre quand le bit EN est mit a 1 avec l'instruction WRMSR, le comptage demarre quand l'instruction a fini.
+les infos doivent etre mise a jour avant ou pendant l'ecriture du bit.
+fin du comptage quand bit remis a 0.
+
+checker c'est quoi IBS
+-> bit 10 dans Fn8000_0001_ECX
+-> exclusif a AMD
+-> permet de profiler instruction fetch/decode
+-> j'arrive pas a faire fonctionner avec perf stat
+-> MAIS amd uprof ca marche bien
