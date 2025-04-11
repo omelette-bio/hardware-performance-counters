@@ -108,6 +108,8 @@ int main(int argc, char** argv) {
 	else printf("No NorthBridge Performance Counter.\n");
 	if ((ecx >> 25) & 1) printf("4 L2 Cache Performance Counters\n\t().\n");
 	else printf("No L2 Cache Performance Counter.\n");
+	if ((ecx >> 10) & 1) printf("IBS supported.\n");
+	else printf("IBS not supported.\n");
 	#endif
 	#ifdef INTEL
 
