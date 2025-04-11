@@ -117,12 +117,12 @@ int main(int argc, char** argv) {
 	for (int i=0; i<32; i++) if (features_ecx[i]) printf("Fixed counter %d supported\n", i);
 	
 	printf("\n");
-	printf("%-40s %d\n", "Performance monitoring version", eax & 0xff);
-	printf("%-40s %d\n", "Bit width of an IA32_PMCx MSR", (eax >> 16) & 0xff);
-	printf("%-40s %d\n", "Number of general purpose PMC", (eax >> 8) & 0xff);
-	printf("%-40s %d\n", "Number of fixed PMC", edx & 0xff);
+	printf("%-50s %d\n", "Performance monitoring version", eax & 0xff);
+	printf("%-50s %d\n", "Bit width of an IA32_PMCx MSR", (eax >> 16) & 0xff);
+	printf("%-50s %d\n", "Number of general purpose PMC per logical core", (eax >> 8) & 0xff);
+	printf("%-50s %d\n", "Number of fixed PMC", edx & 0xff);
 	int arch_ev = (eax >> 24) & 0xff;
-	printf("%-40s %d\n","Number of architectural events", arch_ev);
+	printf("%-50s %d\n","Number of architectural events", arch_ev);
   
 	/*
 	uint32_t eax_b, ebx_b, ecx_b, edx_b;
