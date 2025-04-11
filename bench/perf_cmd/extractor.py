@@ -1,9 +1,9 @@
-events = ('L1-dcache-loads:u', 'L1-dcache-load-misses:u', 'l2_cache_req_stat.ls_rd_blk_l_hit_x:u', 'l2_cache_req_stat.ls_rd_blk_c:u', 'cache-misses:u', 'cache-references:u', 'l2_rqsts.miss:u','LLC-store-misses:u', 'LLC-load-misses:u','L1-dcache-stores:u')
+events = ('cycles:u', 'instructions:u', 'L1-dcache-loads:u', 'L1-dcache-load-misses:u', 'l2_cache_req_stat.ls_rd_blk_l_hit_x:u', 'l2_cache_req_stat.ls_rd_blk_c:u', 'cache-misses:u', 'cache-references:u', 'l2_rqsts.miss:u','LLC-store-misses:u', 'LLC-load-misses:u','L1-dcache-stores:u')
 
 data=dict()
 count=dict()
 
-f = open('memory_bound_AMD.data','r')
+f = open('cpu_bound_intel2.data','r')
 print("event, quantity")
 for i in f.readlines():
     words = i.split()

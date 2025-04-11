@@ -44,9 +44,23 @@ compteur demarre quand le bit EN est mit a 1 avec l'instruction WRMSR, le compta
 les infos doivent etre mise a jour avant ou pendant l'ecriture du bit.
 fin du comptage quand bit remis a 0.
 
-checker c'est quoi IBS
--> bit 10 dans Fn8000_0001_ECX
--> exclusif a AMD
--> permet de profiler instruction fetch/decode
--> j'arrive pas a faire fonctionner avec perf stat
--> MAIS amd uprof ca marche bien
+## Comment ca fonctionne ?
+
+
+
+## IBS
+
+methode de mesure exclusive a amd
+compatibilite avec IBS marquee dans le bit 10 de CPUID[800000001].ECX
+arrive pas a marcher avec perf stat mais amd uprof oui
+
+- technique de profilage qui permet d'avoir beaucoup d'informations
+- identifie les instructions qui n'utilisent pas le pipeline et la hierarchie memoire au max des capacites
+- deux sampling : op sampling et fetch sampling
+
+### fetch
+
+- addresse de fetch
+- est-ce que le fetch a fini ou non
+- est-ce que le fetch a fait defaut dans le cache instruction
+- est-ce que le fetch a fait defaut dans le niveau 1 ou 2 du ITLB

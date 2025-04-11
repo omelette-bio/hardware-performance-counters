@@ -49,9 +49,24 @@ en gros pour compter un evenement
 - si on veut arreter, ecrire "0" dans le bit EN avec l'instruction WRMSR.
 
 
+## environnement d'experience
+### intel 
+nom : 11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40 GHz
+
+adress size : 39 bits physical, 48 bits virtual
+
+cores : 4 physical, 8 logical
+
+### amd
+nom : AMD Ryzen 5 3600X
+
+adress size : 48 bits physical, 48 bits virtual
+
+cores : 6 physical, 12 logical
 
 ## plan ?
 
+- environnement d'experience
 - c'est quoi un compteur materiel de performances
 
 TROUVER LES COMPTEURS COMPATIBLES

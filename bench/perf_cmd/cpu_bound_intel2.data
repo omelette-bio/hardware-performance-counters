@@ -1,0 +1,60 @@
+
+ Performance counter stats for './cpu_bound_intel':
+
+         3,224,478      cycles:u                                                              
+         1,963,558      instructions:u                   #    0.61  insn per cycle            
+
+       0.004198761 seconds time elapsed
+
+       0.003214000 seconds user
+       0.001062000 seconds sys
+
+
+
+ Performance counter stats for './cpu_bound_intel':
+
+         3,045,064      cycles:u                                                              
+         1,963,557      instructions:u                   #    0.64  insn per cycle            
+
+       0.003636835 seconds time elapsed
+
+       0.001875000 seconds user
+       0.001869000 seconds sys
+
+
+
+ Performance counter stats for './cpu_bound_intel':
+
+         3,052,578      cycles:u                                                              
+         1,963,554      instructions:u                   #    0.64  insn per cycle            
+
+       0.002773146 seconds time elapsed
+
+       0.001476000 seconds user
+       0.001460000 seconds sys
+
+
+
+ Performance counter stats for './cpu_bound_intel':
+
+         3,047,694      cycles:u                                                              
+         1,963,557      instructions:u                   #    0.64  insn per cycle            
+
+       0.003744390 seconds time elapsed
+
+       0.002540000 seconds user
+       0.001262000 seconds sys
+
+
+
+ Performance counter stats for './cpu_bound_intel':
+
+         3,098,564      cycles:u                                                              
+         1,963,557      instructions:u                   #    0.63  insn per cycle            
+
+       0.002686629 seconds time elapsed
+
+       0.001363000 seconds user
+       0.001346000 seconds sys
+
+
