@@ -1,0 +1,271 @@
+
+
+ Performance counter stats for './memory_bound_bench':
+
+     5,261,233,705      L1-dcache-load-misses:u          #   65.14% of all L1-dcache accesses 
+     8,076,643,538      L1-dcache-loads:u                                                     
+       164,079,966      L1-dcache-stores:u                                                    
+
+      13.047505344 seconds time elapsed
+
+      12.949730000 seconds user
+       0.046843000 seconds sys
+
+
+
+ Performance counter stats for './memory_bound_bench':
+
+         1,441,182      l2_rqsts.all_rfo:u                                                    
+               195      l2_rqsts.rfo_miss:u                                                   
+     5,017,471,186      l2_rqsts.all_demand_data_rd:u                                         
+       368,495,306      l2_rqsts.demand_data_rd_miss:u                                        
+
+      12.295899428 seconds time elapsed
+
+      12.222742000 seconds user
+       0.036907000 seconds sys
+
+
+
+ Performance counter stats for './memory_bound_bench':
+
+     5,259,393,666      L1-dcache-load-misses:u          #   65.12% of all L1-dcache accesses 
+     8,076,643,619      L1-dcache-loads:u                                                     
+       164,079,968      L1-dcache-stores:u                                                    
+
+      12.410110473 seconds time elapsed
+
+      12.330064000 seconds user
+       0.036753000 seconds sys
+
+
+
+ Performance counter stats for './memory_bound_bench':
+
+         1,436,116      l2_rqsts.all_rfo:u                                                    
+               177      l2_rqsts.rfo_miss:u                                                   
+     5,017,855,396      l2_rqsts.all_demand_data_rd:u                                         
+       370,153,153      l2_rqsts.demand_data_rd_miss:u                                        
+
+      12.284825603 seconds time elapsed
+
+      12.208862000 seconds user
+       0.039868000 seconds sys
+
+
+
+ Performance counter stats for './memory_bound_bench':
+
+     5,257,537,084      L1-dcache-load-misses:u          #   65.10% of all L1-dcache accesses 
+     8,076,642,918      L1-dcache-loads:u                                                     
+       164,079,814      L1-dcache-stores:u                                                    
+
+      12.418475812 seconds time elapsed
+
+      12.332892000 seconds user
+       0.044828000 seconds sys
+
+
+
+ Performance counter stats for './memory_bound_bench':
+
+         1,438,454      l2_rqsts.all_rfo:u                                                    
+               174      l2_rqsts.rfo_miss:u                                                   
+     5,020,030,178      l2_rqsts.all_demand_data_rd:u                                         
+       373,842,278      l2_rqsts.demand_data_rd_miss:u                                        
+
+      12.372877989 seconds time elapsed
+
+      12.294642000 seconds user
+       0.040856000 seconds sys
+
+
+
+ Performance counter stats for './memory_bound_bench':
+
+     5,264,626,949      L1-dcache-load-misses:u          #   65.18% of all L1-dcache accesses 
+     8,076,642,842      L1-dcache-loads:u                                                     
+       164,079,958      L1-dcache-stores:u                                                    
+
+      12.411575090 seconds time elapsed
+
+      12.330830000 seconds user
+       0.042864000 seconds sys
+
+
+
+ Performance counter stats for './memory_bound_bench':
+
+         1,445,451      l2_rqsts.all_rfo:u                                                    
+               229      l2_rqsts.rfo_miss:u                                                   
+     5,020,679,710      l2_rqsts.all_demand_data_rd:u                                         
+       369,146,623      l2_rqsts.demand_data_rd_miss:u                                        
+
+      12.257150590 seconds time elapsed
+
+      12.167416000 seconds user
+       0.053794000 seconds sys
+
+
+
+ Performance counter stats for './memory_bound_bench':
+
+     5,266,677,844      L1-dcache-load-misses:u          #   65.21% of all L1-dcache accesses 
+     8,076,642,897      L1-dcache-loads:u                                                     
+       164,079,965      L1-dcache-stores:u                                                    
+
+      12.456938200 seconds time elapsed
+
+      12.385541000 seconds user
+       0.034876000 seconds sys
+
+
+
+ Performance counter stats for './memory_bound_bench':
+
+         1,445,670      l2_rqsts.all_rfo:u                                                    
+               211      l2_rqsts.rfo_miss:u                                                   
+     5,026,163,500      l2_rqsts.all_demand_data_rd:u                                         
+       372,951,037      l2_rqsts.demand_data_rd_miss:u                                        
+
+      12.454892236 seconds time elapsed
+
+      12.353559000 seconds user
+       0.064744000 seconds sys
+
+
+
+ Performance counter stats for './memory_bound_bench':
+
+     5,263,206,290      L1-dcache-load-misses:u          #   65.17% of all L1-dcache accesses 
+     8,076,642,530      L1-dcache-loads:u                                                     
+       164,079,819      L1-dcache-stores:u                                                    
+
+      12.382677610 seconds time elapsed
+
+      12.310817000 seconds user
+       0.035872000 seconds sys
+
+
+
+ Performance counter stats for './memory_bound_bench':
+
+         1,444,531      l2_rqsts.all_rfo:u                                                    
+               188      l2_rqsts.rfo_miss:u                                                   
+     5,020,494,447      l2_rqsts.all_demand_data_rd:u                                         
+       370,537,187      l2_rqsts.demand_data_rd_miss:u                                        
+
+      12.292749673 seconds time elapsed
+
+      12.213053000 seconds user
+       0.042900000 seconds sys
+
+
+
+ Performance counter stats for './memory_bound_bench':
+
+     5,258,266,575      L1-dcache-load-misses:u          #   65.10% of all L1-dcache accesses 
+     8,076,643,295      L1-dcache-loads:u                                                     
+       164,079,967      L1-dcache-stores:u                                                    
+
+      12.352090080 seconds time elapsed
+
+      12.278131000 seconds user
+       0.034859000 seconds sys
+
+
+
+ Performance counter stats for './memory_bound_bench':
+
+         1,445,207      l2_rqsts.all_rfo:u                                                    
+               190      l2_rqsts.rfo_miss:u                                                   
+     5,020,717,215      l2_rqsts.all_demand_data_rd:u                                         
+       369,650,360      l2_rqsts.demand_data_rd_miss:u                                        
+
+      12.277122470 seconds time elapsed
+
+      12.194973000 seconds user
+       0.044871000 seconds sys
+
+
+
+ Performance counter stats for './memory_bound_bench':
+
+     5,260,515,274      L1-dcache-load-misses:u          #   65.13% of all L1-dcache accesses 
+     8,076,642,126      L1-dcache-loads:u                                                     
+       164,079,674      L1-dcache-stores:u                                                    
+
+      12.279879168 seconds time elapsed
+
+      12.196018000 seconds user
+       0.047860000 seconds sys
+
+
+
+ Performance counter stats for './memory_bound_bench':
+
+         1,443,207      l2_rqsts.all_rfo:u                                                    
+               197      l2_rqsts.rfo_miss:u                                                   
+     5,019,865,877      l2_rqsts.all_demand_data_rd:u                                         
+       369,915,624      l2_rqsts.demand_data_rd_miss:u                                        
+
+      12.298059989 seconds time elapsed
+
+      12.203458000 seconds user
+       0.057795000 seconds sys
+
+
+
+ Performance counter stats for './memory_bound_bench':
+
+     5,258,248,524      L1-dcache-load-misses:u          #   65.10% of all L1-dcache accesses 
+     8,076,642,658      L1-dcache-loads:u                                                     
+       164,079,944      L1-dcache-stores:u                                                    
+
+      12.243127828 seconds time elapsed
+
+      12.164713000 seconds user
+       0.041876000 seconds sys
+
+
+
+ Performance counter stats for './memory_bound_bench':
+
+         1,471,977      l2_rqsts.all_rfo:u                                                    
+               190      l2_rqsts.rfo_miss:u                                                   
+     5,018,890,956      l2_rqsts.all_demand_data_rd:u                                         
+       371,548,097      l2_rqsts.demand_data_rd_miss:u                                        
+
+      12.331101550 seconds time elapsed
+
+      12.258214000 seconds user
+       0.035886000 seconds sys
+
+
+
+ Performance counter stats for './memory_bound_bench':
+
+     5,258,903,266      L1-dcache-load-misses:u          #   65.11% of all L1-dcache accesses 
+     8,076,642,456      L1-dcache-loads:u                                                     
+       164,079,816      L1-dcache-stores:u                                                    
+
+      12.302235275 seconds time elapsed
+
+      12.223391000 seconds user
+       0.041880000 seconds sys
+
+
+
+ Performance counter stats for './memory_bound_bench':
+
+         1,466,393      l2_rqsts.all_rfo:u                                                    
+               208      l2_rqsts.rfo_miss:u                                                   
+     5,019,318,626      l2_rqsts.all_demand_data_rd:u                                         
+       368,318,458      l2_rqsts.demand_data_rd_miss:u                                        
+
+      12.391441516 seconds time elapsed
+
+      12.301853000 seconds user
+       0.045833000 seconds sys
+
+

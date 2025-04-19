@@ -44,22 +44,17 @@ L1-dcache-loads OR cpu/L1-dcache-loads/
 */
 
 #ifdef INTEL_L1
+#define COUNTER_NUMBER 3
+int fds[3];
+char* events[3] = {"L1-dcache-stores", "L1-dcache-loads", "L1-dcache-load-misses"};
+uint64_t counters[3];
+
+#elif INTEL_L2
 #define COUNTER_NUMBER 4
 int fds[4];
-char* events[4] = {"L1-dcache-stores", "L1-dcache-store-misses", "L1-dcache-loads", "L1-dcache-load-misses"};
+char* events[4] = {"l2_rqsts.all_rfo", "l2_rqsts.rfo_miss", "l2_rqsts.all_demand_data_rd", "l2_rqsts.demand_data_rd_miss"};
 uint64_t counters[4];
 
-#elif AMD_L1
-#define COUNTER_NUMBER 2 
-int fds[2];
-char* events[2] = {"L1-dcache-loads","L1-dcache-load-misses"};
-uint64_t counters[2];
-
-#elif AMD_L2
-#define COUNTER_NUMBER 2
-int fds[2];
-char* events[2] = {"l2_cache_hit","l2_cache_miss"};
-uint64_t counters[2];
 #endif
 
 
@@ -154,20 +149,10 @@ int main()
 	for (int i=0; i<COUNTER_NUMBER; i++)
 		read(fds[i], &counters[i], sizeof(uint64_t));
 
-	#ifdef INTEL_L1
-	fprintf(stderr, "L1_CACHE_LOADS: %lu\n", counters[0]);
-	fprintf(stderr, "L1_CACHE_LOAD_MISSES: %lu\n", counters[1]);
-	fprintf(stderr, "L1_CACHE_STORES: %lu\n", counters[2]);
-	fprintf(stderr, "L1_CACHE_STORE_MISSES: %lu\n", counters[3]);  
 	
-	#elif AMD_L1
-	fprintf(stderr, "L1_CACHE_LOADS: %lu\n", counters[0]);
-	fprintf(stderr, "L1_CACHE_LOAD_MISSES: %lu\n", counters[1]);
-	
-	#elif AMD_L2
-	fprintf(stderr, "%-20s: %lu\n", "L2_REQUESTS_HIT", counters[0]);
-	fprintf(stderr, "%-20s: %lu\n", "L2_REQUESTS_MISS", counters[1]);
-	#endif
+	fprintf(stderr, "event, data\n");
+	for (int j=0; j<COUNTER_NUMBER; j++)
+		fprintf(stderr, "%s, %lu\n", events[j], counters[j]);  
 
 	for (int i=0; i<COUNTER_NUMBER; i++)
 		close(fds[i]);
