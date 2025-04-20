@@ -55,6 +55,12 @@ int fds[4];
 char* events[4] = {"l2_rqsts.all_rfo", "l2_rqsts.rfo_miss", "l2_rqsts.all_demand_data_rd", "l2_rqsts.demand_data_rd_miss"};
 uint64_t counters[4];
 
+#else 
+#define COUNTER_NUMBER 0
+int fds[1];
+char* events[1] = {""};
+uint64_t counters[1];
+
 #endif
 
 

@@ -1,4 +1,4 @@
-event, data
+event, quantity
 L1-dcache-stores, 1562722
 L1-dcache-loads, 7814087801
 L1-dcache-load-misses, 5273435865
