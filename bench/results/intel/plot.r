@@ -21,19 +21,15 @@ combined_data <- bind_rows(file1_data, file2_data) %>%
                        event_num + 0.2))
 
 # 3. Create the plot
-p <- ggplot(combined_data, aes(x = x_pos, y = quantity, fill = source)) +
-  geom_col(width = 0.35) +
-  # Set breaks at original event positions (not offset positions)
-  scale_x_continuous(
-    breaks = unique(combined_data$event_num),
-    labels = levels(combined_data$event_factor)
-  ) +
+ggplot(combined_data, aes(x = event, y = quantity, fill = source)) +
+  geom_col(position = position_dodge(width = 0.7), width = 0.6) +
   scale_fill_manual(values = c("perf" = "#1f77b4", "libpfm" = "#ff7f0e")) +
-  labs(title = "PMU Event Comparison : perf command vs libpfm", 
+  labs(title = "PMU Event Comparison", 
        x = "Event", 
        y = "Measurement Value",
        fill = "Data Source") +
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 
-print(p)
+
+ggsave("plot.pdf")
