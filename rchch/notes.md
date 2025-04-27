@@ -5,12 +5,15 @@ chaque bit correspond a une fonctionnalite decrite dans le manuel AMD(AMD64 Arch
 
 ce qui nous interesse dans ce projet c'est la `leaf` 0x80000001 du registre `ECX` sur `AMD` et la `leaf` 0x0000000A sur `INTEL`
 
+
 ### pour AMD 
 elle nous donne des informations sur, par exemple, le support d'ensembles d'instructions comme le SSE4A (streaming/applications multimedia processeur SIMD)
 ce qui est important ici, ce sont les bits 23, 24 et 28, qui nous donnent respectivement le support de compteurs de performances classiques, nb et L3, j'ai vu aussi cache l2 mais j'ai pas retrouve l'info.
 
+
 ### pour INTEL
 je sais pas en sah
+
 
 ## trucs un peu random
 
@@ -24,6 +27,7 @@ regarder les MSRs
 
 ## choses que je dois savoir en plus
 - est-ce que c'est bien si je fais des parralleles avec mon proc dans le rapport
+
 
 ## linux perf API 
 propose une API qui peut etre utilisee en ligne de commande avec perf ou en C avec libperf
@@ -64,19 +68,64 @@ adress size : 48 bits physical, 48 bits virtual
 
 cores : 6 physical, 12 logical
 
+
+## j'ai compris ???
+
+en gros avec libpfm et meme les compteurs de perf en general
+
+maniere "bas niveau" de demarrer un compteur de perf :
+    - on met les infos necessaires dans le MSR event select
+    - on met a 1 le bit EN (enable)
+    - au cycle juste apres la fin de l'instruction WRMSR, on commence a compter
+
+le kernel linux donne acces au linux perf api, qui donne une abstraction afin de pas s'embeter parce que c'est **CHIANT**
+a travers l'appel systeme `perf_event_open()`, le systeme d'exploitation recupere les parametres de l'evenement comme son code, son umask et ensuite va attribuer un `fd` a ce compteur, ce fd est le "userspace" qui permet d'interagir avec le kernel
+
+quand on appelle `perf_event_open()`, le kernel:
+    - cree un objet "perf_event" en memoire
+    - le lie a un compteur PMU
+    - et renvoie un descripteur de fichier
+
+grace a ioctl, on pourra:
+    - reset le compteur avec l'appel `ioctl(fd, PERF_EVENT_IOC_RESET, 0);`
+    - demarrer le compteur avec l'appel `ioctl(fd, PERF_EVENT_IOC_ENABLE, 0);`
+    - arreter le compteur avec l'appel `ioctl(fd, PERF_EVENT_IOC_DISABLE, 0);`
+
+apres lire avec `read(fd, &var, sizeof(uint64_t))`
+
+probleme : encoder l'event et ses parametres 
+
+## code et umask
+
+Unit mask (UMASK) field (bits 8 through 15) — These bits qualify the condition that the selected event
+logic unit detects. Valid UMASK values for each event logic unit are specific to the unit.
+
+Event select field (bits 0 through 7) — Selects the event logic unit used to detect microarchitectural
+conditions (see Table 21-3, for a list of architectural events and their 8-bit codes). The set of values for this field
+is defined architecturally; each value corresponds to an event logic unit for use with an architectural
+performance event
+
 ## plan ?
 
 - environnement d'experience
-- c'est quoi un compteur materiel de performances
+- c'est quoi un compteur materiel de performances (dans l'intro ou l'abstract)
+
+
+HPCs ON X86 CPUs
+- key components
+- encode events
+- start the mesurements
+  - low-level
+  - linux perf api
+  - libpfm
+- HPC sur intel
+- HPC sur AMD
+  
 
 TROUVER LES COMPTEURS COMPATIBLES
 - commande cpuid
 - comment lister les evenements materiels disponibles
 
-HPCs ON X86 CPUs
-- comment lancer des compteurs
-- HPC sur intel
-- HPC sur AMD
 
 BENCHMARKs
 - benchmarks avec commande perf
