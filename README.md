@@ -1,4 +1,4 @@
-# PROJET TUTORAT S2 M1 INFORMATIQUE
+# TUTORSHIP PROJECT S2 M1 COMPUTER SCIENCE
 
 This project is about Hardware Performance Counters
 
@@ -25,4 +25,6 @@ This project is about Hardware Performance Counters
 - Manuel INTEL 
     - Intel 64 and IA-32 Architectures Software Developer's Manual
 
+# PROJET DE TUTORAT S2 M1 INFORMATIQUE
 
+traduction en cours
