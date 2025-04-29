@@ -2,12 +2,12 @@ library(ggplot2)
 library(dplyr)
 
 # 1. Read and prepare data - ensuring consistent column names
-file1_data <- read.csv("cpu_bound_intel.perf.csv") %>% 
-  select(event, quantity) %>% 
+file1_data <- read.csv("memory_bound_intel.perf.csv") %>% 
+  select(event, data) %>% 
   mutate(source = "perf")
 
-file2_data <- read.csv("cpu_bound_intel.libpfm.csv") %>% 
-  select(event, quantity) %>% 
+file2_data <- read.csv("memory_bound_intel.libpfm.csv") %>% 
+  select(event, data) %>% 
   mutate(source = "libpfm")
 
 # 2. Combine data and create positioning
@@ -21,7 +21,7 @@ combined_data <- bind_rows(file1_data, file2_data) %>%
                        event_num + 0.2))
 
 # 3. Create the plot
-ggplot(combined_data, aes(x = event, y = quantity, fill = source)) +
+ggplot(combined_data, aes(x = event, y = data, fill = source)) +
   geom_col(position = position_dodge(width = 0.7), width = 0.6) +
   scale_fill_manual(values = c("perf" = "#1f77b4", "libpfm" = "#ff7f0e")) +
   labs(title = "PMU Event Comparison", 

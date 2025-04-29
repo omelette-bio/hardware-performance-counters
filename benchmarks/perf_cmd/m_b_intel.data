@@ -1,0 +1,96 @@
+Performance counter stats for './memory_bound_bench':
+
+     4,135,127,762      mem_load_retired.l1_hit:u                                               (66.67%)
+     3,914,481,566      mem_load_retired.l1_miss:u                                              (66.66%)
+     3,527,512,392      mem_load_retired.l2_hit:u                                               (66.67%)
+       386,803,474      mem_load_retired.l2_miss:u                                              (66.67%)
+        84,457,894      mem_load_retired.l3_hit:u                                               (66.67%)
+       302,265,036      mem_load_retired.l3_miss:u                                              (66.67%)
+
+      35.364192577 seconds time elapsed
+
+      34.659779000 seconds user
+       0.089662000 seconds sys
+
+
+
+
+ Performance counter stats for './memory_bound_bench':
+
+     4,134,337,580      mem_load_retired.l1_hit:u                                               (66.66%)
+     3,913,969,908      mem_load_retired.l1_miss:u                                              (66.67%)
+     3,533,028,264      mem_load_retired.l2_hit:u                                               (66.67%)
+       381,539,283      mem_load_retired.l2_miss:u                                              (66.67%)
+        81,468,038      mem_load_retired.l3_hit:u                                               (66.67%)
+       300,163,215      mem_load_retired.l3_miss:u                                              (66.66%)
+
+      35.848553699 seconds time elapsed
+
+      35.157903000 seconds user
+       0.083682000 seconds sys
+
+
+
+ Performance counter stats for './memory_bound_bench':
+
+     4,136,013,027      mem_load_retired.l1_hit:u                                               (66.67%)
+     3,913,572,682      mem_load_retired.l1_miss:u                                              (66.67%)
+     3,531,163,834      mem_load_retired.l2_hit:u                                               (66.67%)
+       382,285,340      mem_load_retired.l2_miss:u                                              (66.67%)
+        76,991,478      mem_load_retired.l3_hit:u                                               (66.67%)
+       305,565,404      mem_load_retired.l3_miss:u                                              (66.66%)
+
+      38.709213758 seconds time elapsed
+
+      37.867796000 seconds user
+       0.112223000 seconds sys
+
+
+
+ Performance counter stats for './memory_bound_bench':
+
+     4,135,364,368      mem_load_retired.l1_hit:u                                               (66.67%)
+     3,913,802,447      mem_load_retired.l1_miss:u                                              (66.67%)
+     3,531,720,548      mem_load_retired.l2_hit:u                                               (66.67%)
+       381,741,714      mem_load_retired.l2_miss:u                                              (66.67%)
+        84,907,364      mem_load_retired.l3_hit:u                                               (66.67%)
+       296,884,082      mem_load_retired.l3_miss:u                                              (66.66%)
+
+      37.552457671 seconds time elapsed
+
+      36.760030000 seconds user
+       0.108260000 seconds sys
+
+
+
+ Performance counter stats for './memory_bound_bench':
+
+     4,134,525,500      mem_load_retired.l1_hit:u                                               (66.67%)
+     3,913,379,818      mem_load_retired.l1_miss:u                                              (66.67%)
+     3,532,945,442      mem_load_retired.l2_hit:u                                               (66.66%)
+       381,100,380      mem_load_retired.l2_miss:u                                              (66.67%)
+        81,577,973      mem_load_retired.l3_hit:u                                               (66.67%)
+       299,527,463      mem_load_retired.l3_miss:u                                              (66.67%)
+
+      38.117112747 seconds time elapsed
+
+      37.300523000 seconds user
+       0.108148000 seconds sys
+
+
+
+ Performance counter stats for './memory_bound_bench':
+
+     4,134,169,489      mem_load_retired.l1_hit:u                                               (66.67%)
+     3,913,293,702      mem_load_retired.l1_miss:u                                              (66.67%)
+     3,530,363,564      mem_load_retired.l2_hit:u                                               (66.67%)
+       383,635,268      mem_load_retired.l2_miss:u                                              (66.67%)
+        82,115,485      mem_load_retired.l3_hit:u                                               (66.67%)
+       301,541,003      mem_load_retired.l3_miss:u                                              (66.67%)
+
+      37.649829353 seconds time elapsed
+
+      36.843386000 seconds user
+       0.119172000 seconds sys
+
+

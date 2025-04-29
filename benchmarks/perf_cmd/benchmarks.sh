@@ -10,8 +10,10 @@ if [ "$1" = "INTEL" ]; then
   echo "" > m_b_intel.data
   for i in {1..10}
   do
-    perf stat -e L1-dcache-load-misses,L1-dcache-loads,L1-dcache-stores ./memory_bound_bench > /dev/null 2>> m_b_intel.data
-    perf stat -e l2_rqsts.all_rfo,l2_rqsts.rfo_miss,l2_rqsts.all_demand_data_rd,l2_rqsts.demand_data_rd_miss ./memory_bound_bench > /dev/null 2>> m_b_intel.data
+    perf stat -e mem_load_retired.l1_hit,mem_load_retired.l1_miss, \
+    mem_load_retired.l2_hit,mem_load_retired.l2_miss, \
+    mem_load_retired.l3_hit,mem_load_retired.l3_miss \
+    ./memory_bound_bench > /dev/null 2>> m_b_intel.data
   done
 fi
 

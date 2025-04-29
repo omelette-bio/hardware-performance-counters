@@ -42,8 +42,13 @@ L1-dcache-loads OR cpu/L1-dcache-loads/
   LLC-stores OR cpu/LLC-stores/
   LLC-store-misses
 */
+#ifdef INTEL
+#define COUNTER_NUMBER 6
+int fds[COUNTER_NUMBER];
+char* events[COUNTER_NUMBER] = {"mem_load_retired.l1_hit", "mem_load_retired.l1_miss", "mem_load_retired.l2_hit", "mem_load_retired.l2_miss", "mem_load_retired.l3_hit", "mem_load_retired.l3_miss"};
+uint64_t counters[COUNTER_NUMBER];
 
-#ifdef INTEL_L1
+#elif INTEL_L1
 #define COUNTER_NUMBER 3
 int fds[3];
 char* events[3] = {"L1-dcache-stores", "L1-dcache-loads", "L1-dcache-load-misses"};
