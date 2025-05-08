@@ -1,0 +1,160 @@
+
+ Performance counter stats for './memory_bound_bench':
+
+    10,121,915,492      L1-dcache-loads:u                                                       (83.33%)
+        37,096,098      L1-icache-loads:u                                                       (83.33%)
+     4,163,657,052      L1-dcache-load-misses:u          #   41.14% of all L1-dcache accesses   (83.34%)
+           426,364      L1-icache-load-misses:u          #    1.15% of all L1-icache accesses   (83.34%)
+     1,033,324,493      l2_cache_req_stat.ic_dc_miss_in_l2:u                                        (83.34%)
+     4,104,558,992      l2_cache_req_stat.ic_dc_hit_in_l2:u                                        (83.33%)
+
+      12.086789344 seconds time elapsed
+
+      11.905482000 seconds user
+       0.048453000 seconds sys
+
+
+
+ Performance counter stats for './memory_bound_bench':
+
+    10,125,162,093      L1-dcache-loads:u                                                       (83.33%)
+        52,281,808      L1-icache-loads:u                                                       (83.33%)
+     4,162,961,779      L1-dcache-load-misses:u          #   41.12% of all L1-dcache accesses   (83.33%)
+           632,642      L1-icache-load-misses:u          #    1.21% of all L1-icache accesses   (83.33%)
+       969,744,573      l2_cache_req_stat.ic_dc_miss_in_l2:u                                        (83.33%)
+     4,167,706,198      l2_cache_req_stat.ic_dc_hit_in_l2:u                                        (83.34%)
+
+      12.138004091 seconds time elapsed
+
+      11.966929000 seconds user
+       0.038578000 seconds sys
+
+
+
+ Performance counter stats for './memory_bound_bench':
+
+     8,289,171,107      L1-dcache-loads:u                                                       (83.33%)
+        66,676,054      L1-icache-loads:u                                                       (83.33%)
+     4,161,584,569      L1-dcache-load-misses:u          #   50.21% of all L1-dcache accesses   (83.33%)
+           464,414      L1-icache-load-misses:u          #    0.70% of all L1-icache accesses   (83.34%)
+       783,618,826      l2_cache_req_stat.ic_dc_miss_in_l2:u                                        (83.34%)
+     3,406,329,531      l2_cache_req_stat.ic_dc_hit_in_l2:u                                        (83.33%)
+
+      10.287844949 seconds time elapsed
+
+      10.109220000 seconds user
+       0.046435000 seconds sys
+
+
+
+ Performance counter stats for './memory_bound_bench':
+
+    10,062,742,257      L1-dcache-loads:u                                                       (83.33%)
+        63,516,242      L1-icache-loads:u                                                       (83.33%)
+     4,163,892,191      L1-dcache-load-misses:u          #   41.38% of all L1-dcache accesses   (83.33%)
+           517,073      L1-icache-load-misses:u          #    0.81% of all L1-icache accesses   (83.33%)
+     1,015,830,705      l2_cache_req_stat.ic_dc_miss_in_l2:u                                        (83.34%)
+     4,121,392,967      l2_cache_req_stat.ic_dc_hit_in_l2:u                                        (83.33%)
+
+      12.955234064 seconds time elapsed
+
+      12.735072000 seconds user
+       0.053269000 seconds sys
+
+
+
+ Performance counter stats for './memory_bound_bench':
+
+     8,285,575,035      L1-dcache-loads:u                                                       (83.32%)
+        61,904,932      L1-icache-loads:u                                                       (83.35%)
+     4,163,303,665      L1-dcache-load-misses:u          #   50.25% of all L1-dcache accesses   (83.34%)
+           428,464      L1-icache-load-misses:u          #    0.69% of all L1-icache accesses   (83.32%)
+       783,296,835      l2_cache_req_stat.ic_dc_miss_in_l2:u                                        (83.33%)
+     3,402,549,867      l2_cache_req_stat.ic_dc_hit_in_l2:u                                        (83.33%)
+
+      10.399352775 seconds time elapsed
+
+      10.174692000 seconds user
+       0.062068000 seconds sys
+
+
+
+ Performance counter stats for './memory_bound_bench':
+
+    10,132,712,071      L1-dcache-loads:u                                                       (83.33%)
+        61,690,062      L1-icache-loads:u                                                       (83.33%)
+     4,163,043,669      L1-dcache-load-misses:u          #   41.09% of all L1-dcache accesses   (83.33%)
+           599,200      L1-icache-load-misses:u          #    0.97% of all L1-icache accesses   (83.34%)
+     1,000,640,776      l2_cache_req_stat.ic_dc_miss_in_l2:u                                        (83.34%)
+     4,146,370,799      l2_cache_req_stat.ic_dc_hit_in_l2:u                                        (83.33%)
+
+      12.959401634 seconds time elapsed
+
+      12.725085000 seconds user
+       0.054175000 seconds sys
+
+
+
+ Performance counter stats for './memory_bound_bench':
+
+    10,137,124,532      L1-dcache-loads:u                                                       (83.34%)
+        56,879,643      L1-icache-loads:u                                                       (83.33%)
+     4,163,951,036      L1-dcache-load-misses:u          #   41.08% of all L1-dcache accesses   (83.34%)
+           505,934      L1-icache-load-misses:u          #    0.89% of all L1-icache accesses   (83.33%)
+       996,471,779      l2_cache_req_stat.ic_dc_miss_in_l2:u                                        (83.34%)
+     4,148,150,816      l2_cache_req_stat.ic_dc_hit_in_l2:u                                        (83.33%)
+
+      12.919220405 seconds time elapsed
+
+      12.706455000 seconds user
+       0.052357000 seconds sys
+
+
+
+ Performance counter stats for './memory_bound_bench':
+
+     9,965,583,399      L1-dcache-loads:u                                                       (83.34%)
+        60,855,191      L1-icache-loads:u                                                       (83.33%)
+     4,163,394,873      L1-dcache-load-misses:u          #   41.78% of all L1-dcache accesses   (83.32%)
+           568,856      L1-icache-load-misses:u          #    0.93% of all L1-icache accesses   (83.32%)
+       985,445,293      l2_cache_req_stat.ic_dc_miss_in_l2:u                                        (83.35%)
+     4,091,053,470      l2_cache_req_stat.ic_dc_hit_in_l2:u                                        (83.35%)
+
+      12.510065840 seconds time elapsed
+
+      12.268722000 seconds user
+       0.071996000 seconds sys
+
+
+
+ Performance counter stats for './memory_bound_bench':
+
+    10,128,602,971      L1-dcache-loads:u                                                       (83.32%)
+        49,073,638      L1-icache-loads:u                                                       (83.33%)
+     4,163,557,692      L1-dcache-load-misses:u          #   41.11% of all L1-dcache accesses   (83.33%)
+           467,853      L1-icache-load-misses:u          #    0.95% of all L1-icache accesses   (83.34%)
+     1,014,861,538      l2_cache_req_stat.ic_dc_miss_in_l2:u                                        (83.34%)
+     4,128,590,996      l2_cache_req_stat.ic_dc_hit_in_l2:u                                        (83.34%)
+
+      12.707448153 seconds time elapsed
+
+      12.487014000 seconds user
+       0.055274000 seconds sys
+
+
+
+ Performance counter stats for './memory_bound_bench':
+
+    10,133,110,113      L1-dcache-loads:u                                                       (83.34%)
+        51,946,678      L1-icache-loads:u                                                       (83.33%)
+     4,164,119,028      L1-dcache-load-misses:u          #   41.09% of all L1-dcache accesses   (83.33%)
+           454,737      L1-icache-load-misses:u          #    0.88% of all L1-icache accesses   (83.33%)
+     1,007,836,876      l2_cache_req_stat.ic_dc_miss_in_l2:u                                        (83.33%)
+     4,139,168,116      l2_cache_req_stat.ic_dc_hit_in_l2:u                                        (83.34%)
+
+      12.966770636 seconds time elapsed
+
+      12.724479000 seconds user
+       0.068130000 seconds sys
+
+

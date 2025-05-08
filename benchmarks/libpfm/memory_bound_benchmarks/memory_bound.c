@@ -48,6 +48,12 @@ int fds[COUNTER_NUMBER];
 char* events[COUNTER_NUMBER] = {"mem_load_retired.l1_hit", "mem_load_retired.l1_miss", "mem_load_retired.l2_hit", "mem_load_retired.l2_miss", "mem_load_retired.l3_hit", "mem_load_retired.l3_miss"};
 uint64_t counters[COUNTER_NUMBER];
 
+#elif AMD
+#define COUNTER_NUMBER 6
+int fds[COUNTER_NUMBER];
+char* events[COUNTER_NUMBER] = {"L1-dcache-loads","L1-icache-loads","L1-dcache-load-misses","L1-icache-load-misses","l2_cache_req_stat.ic_dc_miss_in_l2","l2_cache_req_stat.ic_dc_hit_in_l2"};
+uint64_t counters[COUNTER_NUMBER];
+
 #elif INTEL_L1
 #define COUNTER_NUMBER 3
 int fds[3];

@@ -1,0 +1,120 @@
+
+ Performance counter stats for './cpu_bound_bench':
+
+         3,576,077      cycles:u                                                              
+         1,929,673      instructions:u                   #    0.54  insn per cycle            
+
+       0.002624253 seconds time elapsed
+
+       0.001341000 seconds user
+       0.001356000 seconds sys
+
+
+
+ Performance counter stats for './cpu_bound_bench':
+
+         3,584,958      cycles:u                                                              
+         1,929,668      instructions:u                   #    0.54  insn per cycle            
+
+       0.001648281 seconds time elapsed
+
+       0.000848000 seconds user
+       0.000853000 seconds sys
+
+
+
+ Performance counter stats for './cpu_bound_bench':
+
+         3,586,022      cycles:u                                                              
+         1,929,671      instructions:u                   #    0.54  insn per cycle            
+
+       0.001516219 seconds time elapsed
+
+       0.000795000 seconds user
+       0.000795000 seconds sys
+
+
+
+ Performance counter stats for './cpu_bound_bench':
+
+         3,589,705      cycles:u                                                              
+         1,929,671      instructions:u                   #    0.54  insn per cycle            
+
+       0.001510969 seconds time elapsed
+
+       0.000794000 seconds user
+       0.000798000 seconds sys
+
+
+
+ Performance counter stats for './cpu_bound_bench':
+
+         3,592,329      cycles:u                                                              
+         1,929,717      instructions:u                   #    0.54  insn per cycle            
+
+       0.001479119 seconds time elapsed
+
+       0.001512000 seconds user
+       0.000000000 seconds sys
+
+
+
+ Performance counter stats for './cpu_bound_bench':
+
+         3,586,927      cycles:u                                                              
+         1,929,672      instructions:u                   #    0.54  insn per cycle            
+
+       0.001496299 seconds time elapsed
+
+       0.001590000 seconds user
+       0.000000000 seconds sys
+
+
+
+ Performance counter stats for './cpu_bound_bench':
+
+         3,583,760      cycles:u                                                              
+         1,929,714      instructions:u                   #    0.54  insn per cycle            
+
+       0.001526299 seconds time elapsed
+
+       0.001615000 seconds user
+       0.000000000 seconds sys
+
+
+
+ Performance counter stats for './cpu_bound_bench':
+
+         3,588,321      cycles:u                                                              
+         1,929,716      instructions:u                   #    0.54  insn per cycle            
+
+       0.001553780 seconds time elapsed
+
+       0.000804000 seconds user
+       0.000811000 seconds sys
+
+
+
+ Performance counter stats for './cpu_bound_bench':
+
+         3,570,264      cycles:u                                                              
+         1,929,673      instructions:u                   #    0.54  insn per cycle            
+
+       0.003071558 seconds time elapsed
+
+       0.001774000 seconds user
+       0.000898000 seconds sys
+
+
+
+ Performance counter stats for './cpu_bound_bench':
+
+         3,574,686      cycles:u                                                              
+         1,929,671      instructions:u                   #    0.54  insn per cycle            
+
+       0.002465960 seconds time elapsed
+
+       0.001266000 seconds user
+       0.001280000 seconds sys
+
+

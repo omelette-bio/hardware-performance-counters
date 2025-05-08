@@ -64,3 +64,10 @@ arrive pas a marcher avec perf stat mais amd uprof oui
 - est-ce que le fetch a fini ou non
 - est-ce que le fetch a fait defaut dans le cache instruction
 - est-ce que le fetch a fait defaut dans le niveau 1 ou 2 du ITLB
+  
+
+6 core performance counters
+      (MSRC001_020[A,8,],,
+4 NorthBridge performance counters
+No L2 Cache Performance Counters
+IBS Supported

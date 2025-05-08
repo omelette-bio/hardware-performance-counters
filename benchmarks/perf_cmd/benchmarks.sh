@@ -2,7 +2,8 @@ if [ "$1" = "AMD" ]; then
 	gcc -O2 memory_bound.c -o memory_bound_bench
 	for i in {1..10}
 	do
-		perf stat -e L1-dcache-loads,L1-dcache-load-misses,l2_cache_req_stat.ls_rd_blk_l_hit_x,l2_cache_req_stat.ls_rd_blk_c,cache-misses,cache-references ./memory_bound_bench 2>> memory_bound_AMD.data > /dev/null
+		# perf stat -e L1-dcache-loads,L1-icache-loads,L1-dcache-load-misses,L1-icache-load-misses,l2_cache_req_stat.ic_dc_miss_in_l2,l2_cache_req_stat.ic_dc_hit_in_l2 ./memory_bound_bench > /dev/null 2>> m_b_amd.data
+		perf stat -e cycles,instructions ./cpu_bound_bench > /dev/null 2>> c_b_amd.data
 	done
 fi
 if [ "$1" = "INTEL" ]; then
